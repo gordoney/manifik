@@ -42,9 +42,19 @@ $pageClass = $activeMenu->params['pageclass_sfx'];
 <body class="<?php echo $pageClass; ?>">
    
 	
-    <div id="header">
-        <div class="container-fluid clearfix">
-
+    <div id="header" class="header">
+        <div class="container clearfix">
+            <div class="header-left">
+                <div class="logo">
+                    <jdoc:include type="modules" name="logo" style="none" />
+                </div>
+                <jdoc:include type="modules" name="header-left" style="none" />
+            <div class="header-center">
+                <jdoc:include type="modules" name="header-center" style="none" />
+            </div>
+            <div class="header-right">
+                <jdoc:include type="modules" name="header-right" style="none" />
+            </div>
 		</div>	
 	</div>
 

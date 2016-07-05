@@ -19,8 +19,10 @@ client="site">
 	</files>
 	
 	<positions>
-
-
+        <position>logo</position>
+        <position>header-left</position>
+        <position>header-center</position>
+        <position>header-right</position>
 	</positions>
 	
 </extension>
