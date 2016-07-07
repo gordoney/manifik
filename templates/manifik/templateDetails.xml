@@ -21,7 +21,8 @@ client="site">
 	<positions>
         <position>logo</position>
         <position>header-left</position>
-        <position>header-center</position>
+        <position>header-center-top</position>
+        <position>header-center-bottom</position>
         <position>header-right</position>
 	</positions>
 	

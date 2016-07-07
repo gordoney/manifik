@@ -11,12 +11,13 @@ $document = JFactory::getDocument();
 
 /* объ€вл€ем кастомные скрипты */
 $document->addScript('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
-$document->addScript('//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js');
+$document->addScript($this->baseurl.'/templates/'.$this->template.'/js/bootstrap.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/slick.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/custom.js');
 
 /* объ€вл€ем кастомные стили */
-$document->addStyleSheet('//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css');
+$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/reset.css');
+$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/bootstrap.min.css');
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/slick.css');
 $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=cyrillic');
 //$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css');
@@ -29,8 +30,6 @@ $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,
 
     <link rel="stylesheet/less" type="text/css" href="/templates/manifik/css/style.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>    
-    
-    <script src='https://www.google.com/recaptcha/api.js'></script>	
 </head>
 <?php 
 /* ѕолучаем класс страницы */
@@ -49,8 +48,14 @@ $pageClass = $activeMenu->params['pageclass_sfx'];
                     <jdoc:include type="modules" name="logo" style="none" />
                 </div>
                 <jdoc:include type="modules" name="header-left" style="none" />
+            </div>
             <div class="header-center">
-                <jdoc:include type="modules" name="header-center" style="none" />
+                <div class="header-center-top">
+                    <jdoc:include type="modules" name="header-center-top" style="none" />
+                </div>
+                <div class="header-center-bottom">
+                    <jdoc:include type="modules" name="header-center-bottom" style="none" />
+                </div>
             </div>
             <div class="header-right">
                 <jdoc:include type="modules" name="header-right" style="none" />

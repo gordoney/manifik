@@ -57,7 +57,11 @@
 }
 
 .container {
-    width: 1280px;
+    width: 1260px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 body {
@@ -78,13 +82,35 @@ body {
     #HEADER (шапка)
 \*------------------------------------*/
 .header {
+    padding: 30px 0;
+
     .logo {
         font-size: 35px;
         font-family: @font1-bold;
         color: @font-color2;
     }
 }
+
 .header-left {
     font-size: 14px;
     color: lighten(@font-color2, 50%);
+    font-weight: 300;
+    float: left;
+    width: 25%;
+}
+
+.header-center {
+    float: left;
+    width: 50%;
+}
+
+.header-center-bottom {
+    text-align: center;
+    font-size: 35px;
+    font-family: @font1;
+}
+
+.header-right {
+    float: left;
+    width: 25%;
 }
