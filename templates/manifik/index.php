@@ -12,13 +12,11 @@ $document = JFactory::getDocument();
 /* объ€вл€ем кастомные скрипты */
 $document->addScript('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/bootstrap.min.js');
-$document->addScript($this->baseurl.'/templates/'.$this->template.'/js/slick.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/custom.js');
 
 /* объ€вл€ем кастомные стили */
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/reset.css');
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/bootstrap.min.css');
-$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/slick.css');
 $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=cyrillic');
 //$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css');
 ?>
@@ -50,7 +48,7 @@ $pageClass = $activeMenu->params['pageclass_sfx'];
                 <jdoc:include type="modules" name="header-left" style="none" />
             </div>
             <div class="header-center">
-                <div class="header-center-top">
+                <div class="header-center-top clearfix">
                     <jdoc:include type="modules" name="header-center-top" style="none" />
                 </div>
                 <div class="header-center-bottom">
@@ -58,11 +56,25 @@ $pageClass = $activeMenu->params['pageclass_sfx'];
                 </div>
             </div>
             <div class="header-right">
-                <jdoc:include type="modules" name="header-right" style="none" />
+                <div class="header-right-top clearfix">
+                    <jdoc:include type="modules" name="header-right-top" style="none" />
+                </div>
+                <div class="header-right-bottom">
+                    <jdoc:include type="modules" name="header-right-bottom" style="none" />
+                </div>
             </div>
 		</div>	
 	</div>
 
+    <div id="menu" class="menu">
+        <jdoc:include type="modules" name="menu" style="none" />
+	</div>
+
+    <?php if ($this->countModules('before-content')) { ?>
+        <div id="before-content" class="before-content">
+            <jdoc:include type="modules" name="before-content" style="none" />
+        </div>
+    <?php } ?>
 	
 	<div id="content">
 		<div class="container clearfix">

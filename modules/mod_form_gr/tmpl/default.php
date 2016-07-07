@@ -8,17 +8,6 @@
 
 // no direct access
 defined('_JEXEC') or die;
-$qtyFieldsInFirstBlock = round(count($fields)/2);
-
-$json = array();
-$json['id'] = $module->id;
-$json['fields'] = $fields;
-$json['mailHead'] = $params->get('mail_head');
-$json['recipient'] = $params->get('recipient');
-$json['quantityFields'] = $quantityFields;
-$json['captchaSecretKey'] = $params->get('captcha_secret_key');
-$json['captchaOn'] = $params->get('captcha_on');
-$json = json_encode($json);
 ?>
 
 <div class="mod_form_gr">

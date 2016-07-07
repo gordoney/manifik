@@ -23,7 +23,10 @@ client="site">
         <position>header-left</position>
         <position>header-center-top</position>
         <position>header-center-bottom</position>
-        <position>header-right</position>
+        <position>header-right-top</position>
+        <position>header-right-bottom</position>
+        <position>menu</position>
+        <position>before-content</position>
 	</positions>
 	
 </extension>
