@@ -19,6 +19,7 @@ $document->addStyleSheet(JURI::base().'modules/'.$module->module.'/slick/slick.c
 
 $slides = modSliderGrHelper::getSlides($params);
 
+
 require JModuleHelper::getLayoutPath('mod_slider_gr', $params->get('layout', 'default'));
 ?>
 

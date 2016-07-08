@@ -70,9 +70,9 @@ $pageClass = $activeMenu->params['pageclass_sfx'];
         <jdoc:include type="modules" name="menu" style="none" />
 	</div>
 
-    <?php if ($this->countModules('before-content')) { ?>
-        <div id="before-content" class="before-content">
-            <jdoc:include type="modules" name="before-content" style="none" />
+    <?php if ($this->countModules('before-content-without-container')) { ?>
+        <div id="before-content-without-container" class="before-content">
+            <jdoc:include type="modules" name="before-content-without-container" style="none" />
         </div>
     <?php } ?>
 	
@@ -81,6 +81,12 @@ $pageClass = $activeMenu->params['pageclass_sfx'];
 
 		</div>
 	</div>	
+
+    <?php if ($this->countModules('after-content-without-container')) { ?>
+        <div id="after-content-without-container" class="before-content">
+            <jdoc:include type="modules" name="after-content-without-container" style="none" />
+        </div>
+    <?php } ?>
 	
     <div id="footer">
         <div class="container clearfix">

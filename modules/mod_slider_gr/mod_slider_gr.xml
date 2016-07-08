@@ -31,12 +31,26 @@
 					label="Контент" filter="raw">
 					<fieldset name="slider_block" repeat="true">
 						<field name="img" type="media"
-							label="Слайд" />
+							label="Слайд (используется в слайдере)" />
 						<field name="service" type="text"
-							label="Название услуги" />
+							label="Название услуги (используется в слайдере)" />
+						<field name="img-small-1" type="media"
+							label="Слайд (используется в О нас)" />
+						<field name="img-small-2" type="media"
+							label="Слайд (используется в О нас)" />
+						<field name="img-small-3" type="media"
+							label="Слайд (используется в О нас)" />
+						<field name="slide-name" type="text"
+							label="Название слайда (используется в О нас)" />
+                        <field name="slide-text" type="textarea"
+							label="Текст  в слайде (используется в О нас)" />
 					</fieldset>
 				</field>					
 			</fieldset>
+            <fieldset name="advanced">
+				<field name="layout" type="modulelayout" 
+                    label="JFIELD_ALT_LAYOUT_LABEL" />     
+            </fieldset>
 		</fields>
 	</config>
 </extension>
