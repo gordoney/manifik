@@ -10,11 +10,21 @@
 defined('_JEXEC') or die;
 ?>
 <div class="mod-slider-gr about">
+
+    <div class="container">
+        <?php jimport( 'joomla.application.module.helper' );
+        $modules = JModuleHelper::getModules('inside-about-us'); 
+        $attribs['style'] = 'xhtml';
+
+        foreach($modules as $module){ 
+            echo JModuleHelper::renderModule($module, $attribs);
+        } ?>
+    </div>
+
 	<div class="slick-slider js-slick-slider">
 		<?php foreach ($slides as $key => $slide) { ?>
         
 			<div class="item">
-                <div class="arrows arrow-left js-arrow-left"><i class="icon-right-arrow"></i></div>
 				<div class="wrapper">
 					<div class="container">
                         <div class="name">
@@ -25,17 +35,16 @@ defined('_JEXEC') or die;
                                 <?php echo $slide['slide-text']; ?>
                             </div>
                             <div class="img clearfix">
-                                <div class="img-left"></div>
+                                <div class="img-left"><img src="<?php echo $slide['img-small-1']; ?>" alt=""></div>
                                 <div class="img-right">
-                                   <div class="img-right-top"></div>
-                                   <div class="img-right-bottom"></div>
+                                   <div class="img-right-top"><img src="<?php echo $slide['img-small-2']; ?>" alt=""></div>
+                                   <div class="img-right-bottom"><img src="<?php echo $slide['img-small-3']; ?>" alt=""></div>
                                 </div>
                             </div>
                         </div>
 					</div>
 				</div>
-                <div class="arrows arrow-right js-arrow-right"><i class="icon-right-arrow"></i></div>
 			</div>
-		<?php } ?>
+		<?php } ?>   
 	</div>
 </div>

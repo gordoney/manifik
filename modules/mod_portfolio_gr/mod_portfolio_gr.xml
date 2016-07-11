@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Модуль портфолио</name>
+	<author>Sergei Bolonikov</author>
+	<creationDate>2016</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>Модуль портфолио</description>
+	<files>
+		<folder>tmpl</folder>
+		<filename module="mod_portfolio_gr">mod_portfolio_gr.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_portfolio_gr.xml</filename>
+		<filename>helper.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field name="mod-name" type="text"
+					label="Название модуля" />
+                <field name="mod-text" type="textarea"
+					label="Текст модуля" />
+                <field name="img-back" type="media"
+					label="Бэкграунд" />
+				<field name="portfolio"
+					type="Repeatable"
+					description="Контент"
+					label="Контент">
+					<fieldset name="portfolio-block" repeat="true">		
+                        <field name="img-prev" type="media"
+                            label="Превью изображение" />                     
+                        <field name="img-full" type="media"
+                            label="Полное изображение" />                       
+					</fieldset>
+				</field>				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

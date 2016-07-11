@@ -16,7 +16,8 @@ $document = JFactory::getDocument();
 $document->addScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU");
 $document->addScript(JURI::base().'modules/'.$module->module.'/script.js');
 
-$markers = modMapGrHelper::getMarkers($params);
+$markers = modMapGrHelper::getData($params, 'marker');
+$phones = modMapGrHelper::getData($params, 'phone');
 
 $json = array();
 $json['id'] = $module->id;

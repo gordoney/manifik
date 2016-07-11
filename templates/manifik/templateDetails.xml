@@ -27,7 +27,10 @@ client="site">
         <position>header-right-bottom</position>
         <position>menu</position>
         <position>before-content-without-container</position>
+        <position>before-content-with-container</position>
         <position>after-content-without-container</position>
+        <position>after-content-with-container</position>
+        <position>inside-about-us</position>
 	</positions>
 	
 </extension>

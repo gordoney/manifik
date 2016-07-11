@@ -10,15 +10,17 @@ defined('_JEXEC') or die;
 
 abstract class modMapGrHelper
 {
-	static public function getMarkers($params) {
-		$markers = array();
-		foreach (json_decode($params->get('marker')) as $nameFields=>$fields) {
-			foreach ($fields as $key=>$field) {
-				$markers[$key][$nameFields] = $field;
-			}
-		}
+	static public function getData($params, $repeatBlock) {
+		$data = array();
+        if ($params->get($repeatBlock)) {
+            foreach (json_decode($params->get($repeatBlock)) as $nameFields=>$fields) {
+                foreach ($fields as $key=>$field) {
+                    $data[$key][$nameFields] = $field;
+                }
+            }        
+        }
 
-		return $markers;
+		return $data;
 	}
 }
 

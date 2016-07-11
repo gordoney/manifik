@@ -24,26 +24,46 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-                <field name="modal_btn_text" type="text"
-                    label="Текст на кнопке" />	
 				<field name="mapx" type="text"
 					label="Центр карты (x)" />		
 				<field name="mapy" type="text"
 					label="Центр карты (y)" />	
 				<field name="mapzoom" type="text"
 					label="zoom карты" />	 
+                <field name="address" type="text"
+                    label="Адрес" /> 
+                    
+				<field name="phone"
+					type="Repeatable"
+					description="Телефоны"
+					label="Телефоны">
+					<fieldset name="phone-block" repeat="true">	
+						<field name="phone-name" type="text"
+							label="Отдел" />	
+                        <field name="phone-code" type="text"
+							label="Код" />                            
+						<field name="phone-number" type="text"
+							label="Номер телефона" />		                     
+					</fieldset>
+				</field>                  
  
 				<field name="marker"
 					type="Repeatable"
 					description="Контент"
 					label="Контент">
-					<fieldset name="marker_block" repeat="true">	
+					<fieldset name="marker-block" repeat="true">	
 						<field name="markerx" type="text"
 							label="Координаты x" />		
 						<field name="markery" type="text"
-							label="Координаты y" />							
+							label="Координаты y" />		                     
 					</fieldset>
 				</field>				
+			</fieldset>
+			<fieldset name="modal" label="В модальном окне">
+                <field name="modal-on" type="checkbox"
+                    label="Текст на кнопке" />	
+                <field name="modal-btn-text" type="text"
+                    label="Текст на кнопке" />					
 			</fieldset>
 			<fieldset name="advanced">
 				<field
