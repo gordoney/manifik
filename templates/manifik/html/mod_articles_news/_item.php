@@ -11,9 +11,9 @@ defined('_JEXEC') or die;
 
 $item_heading = $params->get('item_heading', 'h4');
 ?>
-<pre><?php// print_r(json_decode($item->images)); ?></pre>
+
 <div class="item">
-    <a href="<?php echo $item->link; ?>" style="background-image: url(<?php echo json_decode($item->images)->image_intro; ?>);">
+    <a class="url" href="<?php echo $item->link; ?>" style="background-image: url(<?php echo json_decode($item->images)->image_intro; ?>);">
     
         <div class="info">
             <div class="introtext">

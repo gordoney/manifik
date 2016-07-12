@@ -88,7 +88,8 @@ $pageClass = $activeMenu->params['pageclass_sfx'];
 	
 	<div id="content">
 		<div class="container clearfix">
-
+            <jdoc:include type="message" />
+			<jdoc:include type="component" />
 		</div>
 	</div>	
     

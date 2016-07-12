@@ -116,6 +116,11 @@ body {
     line-height: 1;
 }
 
+body:not(.mainpage) {
+    background: url(../images/back1.png) top left no-repeat, 
+                url(../images/back2.png) bottom left no-repeat;
+}
+
 a, a:hover, a:focus {
     text-decoration: none;
 }
@@ -149,6 +154,13 @@ a, a:hover, a:focus {
     background-color: @color2;
     opacity: 0.5;
     .transition(0.2s);
+}
+
+.page-head {
+    font-size: 59px;
+    font-family: @font1-bold;
+    text-align: center;
+    padding: 30px 0;
 }
 
 
@@ -623,6 +635,8 @@ a, a:hover, a:focus {
 \*------------------------------------*/
 .mod_sale {
     padding: 30px 0 50px 0;
+}
+.mod_sale, .blog-sale {
     
     .mod-name {
         font-size: 70px;
@@ -641,7 +655,7 @@ a, a:hover, a:focus {
         padding-left: 15px;        
     }
 
-    a {
+    .url {
         display: block;
         background-repeat: no-repeat;
         background-position: center center;
@@ -651,7 +665,7 @@ a, a:hover, a:focus {
         padding: 20px;
     }
     
-    a:hover {
+    .url:hover {
         .background-overlay {
             background-color: @color1;
         }
@@ -681,6 +695,26 @@ a, a:hover, a:focus {
         font-size: 33px;
         color: @font-color3;
         font-weight: bold;
+    }
+}
+
+.blog-sale {
+    .items-row {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    .span4 {
+        width: 25%;
+        display: inline-block;
+    }
+    
+    .span4 + .span4{
+        margin-left: 1%;
+    }
+    
+    .items-more {
+        display: none;
     }
 }
 
@@ -833,8 +867,15 @@ a, a:hover, a:focus {
     #FOOTER (футер)
 \*------------------------------------*/
 .footer {
-    padding: 20px 0;
+    padding: 10px 0;
 }
+
+body:not(.mainpage) .footer {
+    .container {
+        border-top: 5px solid @color4;
+    }
+}
+
 .footer-left {
     width: 40%; 
     display: inline-block;
@@ -843,7 +884,7 @@ a, a:hover, a:focus {
     .logo {
         font-size: 46px;
         font-family: @font1-bold;
-        padding: 15px 0;
+        padding: 25px 0;
     }
 }
 
@@ -909,4 +950,48 @@ a, a:hover, a:focus {
     display: inline-block;
     font-size: 20px;
     vertical-align: middle;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #PAGINATION (Пагинация)
+\*------------------------------------*/
+.pagination {
+    text-align: center;
+    padding: 10px 0;
+
+    .counter, .pagination-start, .pagination-prev, .pagination-next, .pagination-end {
+        display: none;
+    }
+    
+    li {
+        display: inline-block;
+    }
+    
+    span, a {
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        padding-top: 10px;
+        font-size: 20px;
+        display: inline-block;
+        margin: 0 10px;
+    }
+    
+    a {
+        color: @font-color2;
+        .transition(0.2s);
+        
+        &:hover {
+            color: @font-color1;
+        }
+    }
+    
+    span {
+        background-color: @color1;
+        color: @font-color3;        
+    }
 }
