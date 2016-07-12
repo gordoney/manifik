@@ -11,6 +11,7 @@ jQuery(document).ready(function() {
                 mapGr = new ymaps.Map("page_map_gr"+json.id, {
                     center: [json.mapx, json.mapy],
                     zoom: json.mapzoom,
+                    controls: ['zoomControl', 'typeSelector',  'fullscreenControl']
                 }); 	
                 
                 json.markers.forEach(function(marker, i) {
@@ -23,6 +24,8 @@ jQuery(document).ready(function() {
                                                                     
                     mapGr.geoObjects.add(mapPlacemark);              
                 }); 
+                
+                mapGr.behaviors.disable('scrollZoom');
             }   
         });
     }

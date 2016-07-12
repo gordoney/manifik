@@ -31,6 +31,10 @@ client="site">
         <position>after-content-without-container</position>
         <position>after-content-with-container</position>
         <position>inside-about-us</position>
+        <position>footer-left</position>
+        <position>footer-center-top</position>
+        <position>footer-center-bottom</position>
+        <position>footer-right</position>
 	</positions>
 	
 </extension>

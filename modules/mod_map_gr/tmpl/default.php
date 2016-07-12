@@ -27,12 +27,12 @@ defined('_JEXEC') or die;
                         <div class="info">
                             <div class="name"><?php echo JText :: _('MOD_MAP_GR_ADDRESS_NAME'); ?></div>
                             <div class="address"><?php echo $params->get('address'); ?></div>
-                            <div class="phones">
+                            <div class="phones clearfix">
                                 <?php if ($phones) { ?>
                                     <?php foreach ($phones as $phone) { ?>
                                         <div class="phone">
                                             <div><?php echo $phone['phone-name']; ?></div>
-                                            <div><?php echo $phone['phone-code']; ?><span><?php echo $phone['phone-number']; ?></span></div>
+                                            <div><?php echo $phone['phone-code']; ?> <span><?php echo $phone['phone-number']; ?></span></div>
                                         </div>
                                     <?php } ?>
                                 <?php } ?>

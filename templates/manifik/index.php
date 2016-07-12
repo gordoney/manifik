@@ -9,13 +9,13 @@ defined('_JEXEC') or die;
 
 $document = JFactory::getDocument();
 
-/* Ó·˙ˇ‚ÎˇÂÏ Í‡ÒÚÓÏÌ˚Â ÒÍËÔÚ˚ */
+/* –æ–±—ä—è–≤–ª—è–µ–º –∫–∞—Å—Ç–æ–º–Ω—ã–µ —Å–∫—Ä–∏–ø—Ç—ã */
 $document->addScript('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/bootstrap.min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/jquery.colorbox-min.js');
 $document->addScript($this->baseurl.'/templates/'.$this->template.'/js/custom.js');
 
-/* Ó·˙ˇ‚ÎˇÂÏ Í‡ÒÚÓÏÌ˚Â ÒÚËÎË */
+/* –æ–±—ä—è–≤–ª—è–µ–º –∫–∞—Å—Ç–æ–º–Ω—ã–µ —Å—Ç–∏–ª–∏ */
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/reset.css');
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/bootstrap.min.css');
 $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=cyrillic');
@@ -32,7 +32,7 @@ $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/colo
    
 </head>
 <?php 
-/* œÓÎÛ˜‡ÂÏ ÍÎ‡ÒÒ ÒÚ‡ÌËˆ˚ */
+/* –ü–æ–ª—É—á–∞–µ–º –∫–ª–∞—Å—Å —Å—Ç—Ä–∞–Ω–∏—Ü—ã */
 $app = JFactory::getApplication();
 $menu = $app->getMenu();
 $activeMenu = $menu->getActive(); 
@@ -109,9 +109,32 @@ $pageClass = $activeMenu->params['pageclass_sfx'];
         </div>
     <?php } ?>
 	
-    <div id="footer">
+    <div id="footer" class="footer">
         <div class="container clearfix">
-            
+            <div class="footer-left">
+                <div class="logo">
+                    <jdoc:include type="modules" name="logo" style="none" />
+                </div>
+                <jdoc:include type="modules" name="footer-left" style="none" />
+            </div>
+            <div class="footer-center">
+                <div class="footer-center-top">
+                    <jdoc:include type="modules" name="footer-center-top" style="none" />
+                </div>
+                <div class="footer-center-bottom">
+                    <jdoc:include type="modules" name="footer-center-bottom" style="none" />
+                </div>
+            </div>
+            <div class="footer-right">
+                <jdoc:include type="modules" name="footer-right" style="none" />
+                <div class="medialine">
+					<?php if(JURI::current() !== JURI::base()){?>
+						<span>–†–∞–∑—Ä–∞–±–æ—Ç–∫–∞ —Å–∞–π—Ç–∞ - </span><a target="_blank" rel="nofollow" href="http://www.medialine.by/">Media Line</a>
+					<?php } else { ?>	
+						<span>–†–∞–∑—Ä–∞–±–æ—Ç–∫–∞ —Å–∞–π—Ç–∞ - </span><a target="_blank" href="http://www.medialine.by/">Media Line</a>
+					<?php } ?>
+				</div>
+            </div>
 		</div>	
 	</div>		
 
