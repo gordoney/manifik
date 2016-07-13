@@ -5,3 +5,4 @@
 
 #Fields: datetime	priority clientip	category	message
 2016-07-07T03:54:25+00:00	INFO 127.0.0.1	joomlafailure	Пустой пароль не допускается
+2016-07-13T11:16:34+00:00	INFO 127.0.0.1	joomlafailure	Пустой пароль не допускается

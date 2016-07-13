@@ -1,13 +1,12 @@
-var modFormGr = {
-    send: function(json) {
-    
+jQuery(document).ready(function() {
+    function formGrSend (json) {
+        
         var id = "form_back_"+json.id;
 		var form = document.getElementById(id);
 		var formData = new FormData(form);
 				
 		var error = 0;
-        
-						
+        				
         for (var i=0; i < json.fields.length; i++) {
             if (json.fields[i]['title']) {
                 formData.append("namefield"+i, json.fields[i]['title']);
@@ -53,4 +52,12 @@ var modFormGr = {
 		}
 				   
     }
-};
+    
+    jQuery('.js-form-send').click(function(e) {
+        e.preventDefault();
+
+        var json = jQuery.parseJSON(jQuery(this).closest('.mod_form_gr').find('.js-form-gr-json').val());
+         
+        formGrSend(json);
+    });
+});

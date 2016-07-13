@@ -839,6 +839,12 @@ body.mainpage, body.contacts {
 /*------------------------------------*\
     #MAP (Карта)
 \*------------------------------------*/
+.mod-map-gr {
+    .map_window {
+        height: 500px;
+    }
+}
+
 .mod-map-gr.modal-off {
     .map_window {
         height: 500px;
@@ -1187,4 +1193,71 @@ body.contacts .footer, body.mainpage  .footer {
 }
 .js-service-open {
     background-color: lighten(@color1, 43%);
+}
+
+
+
+
+
+/*------------------------------------*\
+    #FORM (форма)
+\*------------------------------------*/
+.mod_form_gr {
+    .modal-content-form {
+        padding: 40px;
+        position: relative;
+        text-align: left;
+    }
+    
+    .text {
+        font-size: 18px;
+        font-weight: 300;
+        padding-bottom: 5px;
+    }
+    
+    .field {
+        padding-bottom: 15px;
+        
+        input {
+            height: 35px;
+            width: 100%;
+        }
+        
+        textarea {
+            height: 70px;
+            width: 100%;
+        }
+    }
+    
+    .form-send {
+        height: 45px;
+        font-weight: 300;
+        width: 100%;
+        .transition(0.2s);
+        background-color: @color1;
+        border: 1px solid @color1;
+        color: @font-color3;
+        margin-top: 20px;
+        
+        &:hover {
+            background-color: @color3;
+            color: @font-color1;
+        }
+    }
+    
+    .close {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        display: inline-block;
+        font-size: 50px;
+        .transition(0.2s);
+        font-family: @font1-bold;
+        color: @font-color2;
+        cursor: pointer;
+        
+        &:hover {
+            color: @font-color1;
+        }
+    }
 }

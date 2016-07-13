@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
         
         jQuery('.mod-map-gr').each(function () {
         
-            var json = jQuery.parseJSON(jQuery(this).find('.json').val());
+            var json = jQuery.parseJSON(jQuery(this).find('.js-map-gr-json').val());
             
             ymaps.ready(init);
             

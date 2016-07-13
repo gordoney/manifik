@@ -50,5 +50,5 @@ defined('_JEXEC') or die;
         </div>
     <?php } ?>
     
-    <input type="hidden" class="json" value='<?php echo $json; ?>'>
+    <input type="hidden" class="js-map-gr-json" value='<?php echo $json; ?>'>
 </div>
