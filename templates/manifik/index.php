@@ -20,15 +20,15 @@ $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/rese
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/bootstrap.min.css');
 $document->addStyleSheet('https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=cyrillic');
 $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/colorbox.css');
-//$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css');
+$document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css');
 ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
 <head>
 	<jdoc:include type="head" />
-    <link rel="stylesheet/less" type="text/css" href="/templates/manifik/css/style.less" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>
+    <!--<link rel="stylesheet/less" type="text/css" href="/templates/manifik/css/style.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>-->
    
 </head>
 <?php 
