@@ -162,6 +162,10 @@ a, a:hover, a:focus {
     padding: 30px 0;
 }
 
+p {
+    word-wrap: normal;
+}
+
 
 
 
@@ -223,8 +227,11 @@ body.mainpage, body.contacts {
     .logo {
         font-size: 35px;
         font-family: @font1-bold;
-        color: @font-color2;
         padding-bottom: 10px;
+        
+        a, a:hover {
+            color: @font-color2;
+        }
     }
 }
 
@@ -932,6 +939,10 @@ body.contacts .footer, body.mainpage  .footer {
         font-size: 46px;
         font-family: @font1-bold;
         padding: 25px 0;
+        
+        a, a:hover {
+            color: @font-color2;
+        }        
     }
 }
 
@@ -1050,17 +1061,21 @@ body.contacts .footer, body.mainpage  .footer {
 /*------------------------------------*\
     #ARTICLE (материал)
 \*------------------------------------*/
-.item-page {
+.inner-container {
     margin: 0 140px 0 140px; 
     background-color: white;
     display: inline-block;
-    padding: 0 20px 40px 20px;
+    padding: 0 30px 40px 30px;
     line-height: 1.7;
     font-weight: 300;
     font-size: 14px;
     
-    table td {
-        padding: 0 50px;
+    .item-page {
+        padding-bottom: 30px;
+    }
+    
+    .item-page table td {
+        padding: 0 30px;
     }
 }
 
@@ -1099,4 +1114,77 @@ body.contacts .footer, body.mainpage  .footer {
             border-bottom: 1px solid transparent;
         }
     }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #SERVICE (услуги)
+\*------------------------------------*/
+.mod-service-gr  {
+    margin-bottom: 30px;
+    background-color: lighten(@color4, 20%);
+    .transition(0.4s);
+    
+    .name {
+        font-size: 19px;
+        font-weight: 300;
+        padding: 25px 30px;
+        position: relative;
+        cursor: pointer;
+        
+        &:after {
+            border-right: 6px solid transparent;
+            border-left: 6px solid transparent;
+            border-top: 12px solid @color2;
+            content: '';    
+            top: 35px;
+            right: 30px;
+            position: absolute;
+            display: inline-block;
+            .transition(0.4s);
+        }
+    }
+    
+    .name.js-name {
+        &:after {
+            .transform(90deg);
+        }
+    }
+    
+    .desc {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.7;
+        padding: 0 30px 25px 30px;
+    }   
+    
+    .service {
+        padding: 0 30px 45px 30px;
+    }
+    
+    table {
+        border: 1px solid lighten(@color1, 30%);
+    }   
+        
+    tr + tr {
+        border-top: 1px solid lighten(@color1, 30%);
+    }
+        
+    td {
+        padding: 10px;
+        font-weight: 300;
+        font-size: 14px;
+        word-wrap: normal;
+        background: white;
+    }
+    
+    .info {
+        display: none;
+    }
+}
+.js-service-open {
+    background-color: lighten(@color1, 43%);
 }

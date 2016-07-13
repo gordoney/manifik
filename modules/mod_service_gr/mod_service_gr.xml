@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Модуль услуги</name>
+	<author>Sergei Bolonikov</author>
+	<creationDate>2016</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>Модуль услуги</description>
+	<files>
+		<filename module="mod_service_gr">mod_service_gr.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_service_gr.xml</filename>
+        <folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field name="module-name" type="text"
+					label="Название блока" />   
+                <field name="description" type="editor" filter="safehtml"
+					label="Описание" />    
+
+				<field name="service"
+					type="Repeatable"
+					description="Услуги"
+					label="Услуги">
+					<fieldset name="service-block" repeat="true">	
+						<field name="service-name" type="text"
+							label="Название услуги" />	
+                        <field name="service-work" type="textarea"
+							label="Работы" />                            
+						<field name="service-cost" type="text"
+							label="Стоимость" />		                     
+					</fieldset>
+				</field>                     
+			</fieldset>
+		</fields>
+	</config>
+</extension>

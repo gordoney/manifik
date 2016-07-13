@@ -95,13 +95,15 @@ $pageClass = $activeMenu->params['pageclass_sfx'];
             
             <div id="content">
                 <div class="container clearfix">
-                    <jdoc:include type="message" />
-                    <?php if ($this->countModules('content')) { ?>
-                        <jdoc:include type="modules" name="content" style="none" />
-                    <?php } else { ?>
-                        <jdoc:include type="component" />
-                        <jdoc:include type="modules" name="after-component" style="none" />
-                    <?php } ?>
+                    <div class="inner-container">
+                        <jdoc:include type="message" />
+                        <?php if ($this->countModules('content')) { ?>
+                            <jdoc:include type="modules" name="content" style="none" />
+                        <?php } else { ?>
+                            <jdoc:include type="component" />
+                            <jdoc:include type="modules" name="after-component" style="none" />
+                        <?php } ?>
+                    </div>
                 </div>
             </div>	
             

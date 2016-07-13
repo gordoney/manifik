@@ -13,5 +13,24 @@ jQuery(document).ready(function() {
         jQuery('.mod_portfolio_gr .right-block').css('height', leftHeight);   
     }
     
+    function serviceHandler () {
+        jQuery('.js-service-button').click(function () {
+            jQuery(this).siblings('.js-info').slideToggle(400);
+            
+            if (jQuery(this).closest('.js-mod-service-gr').hasClass('js-service-open')) {
+                jQuery(this).closest('.js-mod-service-gr').removeClass('js-service-open');
+            } else {
+                jQuery(this).closest('.js-mod-service-gr').addClass('js-service-open');
+            }
+            
+            if (jQuery(this).hasClass('js-name')) {
+                jQuery(this).removeClass('js-name');
+            } else {
+                jQuery(this).addClass('js-name');
+            }            
+        });  
+    }    
+    
     portfolioHandler ();
+    serviceHandler ();
 });
