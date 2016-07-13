@@ -16,7 +16,7 @@ $canEdit = $this->item->params->get('access-edit');
 $info    = $params->get('info_block_position', 0);
 ?>
 
-<a class="url" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->alias, $this->item->catid, $this->item->language)); ?>" style="background-image: url('<?php echo json_decode($this->item->images)->image_intro; ?>');">
+<a class="url" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->id, $this->item->catid)); ?>" style="background-image: url('<?php echo json_decode($this->item->images)->image_intro; ?>');">
     <div class="info">
     
         <div class="introtext">

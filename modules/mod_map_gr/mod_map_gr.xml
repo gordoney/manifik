@@ -61,7 +61,7 @@
 			</fieldset>
 			<fieldset name="modal" label="В модальном окне">
                 <field name="modal-on" type="checkbox"
-                    label="Текст на кнопке" />	
+                    label="В модальном окне" />	
                 <field name="modal-btn-text" type="text"
                     label="Текст на кнопке" />					
 			</fieldset>

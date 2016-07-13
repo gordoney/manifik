@@ -23,22 +23,24 @@ defined('_JEXEC') or die;
     <?php } ?>
     
                 <div class="map"> 
-                    <div class="container">
-                        <div class="info">
-                            <div class="name"><?php echo JText :: _('MOD_MAP_GR_ADDRESS_NAME'); ?></div>
-                            <div class="address"><?php echo $params->get('address'); ?></div>
-                            <div class="phones clearfix">
-                                <?php if ($phones) { ?>
-                                    <?php foreach ($phones as $phone) { ?>
-                                        <div class="phone">
-                                            <div><?php echo $phone['phone-name']; ?></div>
-                                            <div><?php echo $phone['phone-code']; ?> <span><?php echo $phone['phone-number']; ?></span></div>
-                                        </div>
+                    <?php if ($params->get('address') || $phones) { ?>
+                        <div class="container">
+                            <div class="info">
+                                <div class="name"><?php echo JText :: _('MOD_MAP_GR_ADDRESS_NAME'); ?></div>
+                                <div class="address"><?php echo $params->get('address'); ?></div>
+                                <div class="phones clearfix">
+                                    <?php if ($phones) { ?>
+                                        <?php foreach ($phones as $phone) { ?>
+                                            <div class="phone">
+                                                <div><?php echo $phone['phone-name']; ?></div>
+                                                <div><?php echo $phone['phone-code']; ?> <span><?php echo $phone['phone-number']; ?></span></div>
+                                            </div>
+                                        <?php } ?>
                                     <?php } ?>
-                                <?php } ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php } ?>
                     <div id="page_map_gr<?php echo $module->id; ?>" class="map_window"></div>				
                 </div>	
                 

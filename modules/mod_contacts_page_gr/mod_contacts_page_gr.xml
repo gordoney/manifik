@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Модуль контактов</name>
+	<author>Sergei Bolonikov</author>
+	<creationDate>2016</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>Модуль контактов</description>
+	<files>
+		<filename module="mod_contacts_page_gr">mod_contacts_page_gr.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_contacts_page_gr.xml</filename>
+        <folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="phone" type="editor" filter="safehtml"
+					label="Телефоны" />	
+                <field name="mail" type="editor" filter="safehtml"
+					label="Почты" />
+                <field name="address" type="editor" filter="safehtml"
+					label="Адрес" />  
+                <field name="url" type="text"
+					label="Ссылка на Яндекс.Карты" />                     
+			</fieldset>
+		</fields>
+	</config>
+</extension>

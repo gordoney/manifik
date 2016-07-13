@@ -34,7 +34,8 @@ client="site">
         <position>footer-left</position>
         <position>footer-center-top</position>
         <position>footer-center-bottom</position>
-        <position>footer-right</position>
+        <position>content</position>
+        <position>after-component</position>
 	</positions>
 	
 </extension>

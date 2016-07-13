@@ -38,9 +38,8 @@ $menu = $app->getMenu();
 $activeMenu = $menu->getActive(); 
 $pageClass = $activeMenu->params['pageclass_sfx'];
 ?>
-<body class="<?php echo $pageClass; ?>">
-   
-	
+<body class="<?php echo $pageClass; ?>">  
+        
     <div id="header" class="header">
         <div class="container clearfix">
             <div class="header-left">
@@ -72,44 +71,60 @@ $pageClass = $activeMenu->params['pageclass_sfx'];
         <jdoc:include type="modules" name="menu" style="none" />
 	</div>
 
-    <?php if ($this->countModules('before-content-without-container')) { ?>
-        <div id="before-content-without-container" class="before-content">
-            <jdoc:include type="modules" name="before-content-without-container" style="none" />
-        </div>
-    <?php } ?>
+    <div class="wrapper">
     
-    <?php if ($this->countModules('before-content-with-container')) { ?>
-        <div id="before-content-with-container" class="before-content-with-container">
-            <div class="container">
-                <jdoc:include type="modules" name="before-content-with-container" style="none" />
-            </div>
-        </div>
-    <?php } ?>    
-	
-	<div id="content">
-		<div class="container clearfix">
-            <jdoc:include type="message" />
-			<jdoc:include type="component" />
-		</div>
-	</div>	
+        <div class="background-tools-1 background-tools"></div>  
+        <div class="background-tools-2 background-tools"></div> 
+        <div class="background-tools-3 background-tools"></div> 
+        <div class="background-tools-4 background-tools"></div>    
     
-    <?php if ($this->countModules('after-content-without-container')) { ?>
-        <div id="after-content-with-container" class="after-content-with-container">
-            <div class="container">
-                <jdoc:include type="modules" name="after-content-with-container" style="none" />
-            </div>
+        <div class="inner-wrapper">
+            <?php if ($this->countModules('before-content-without-container')) { ?>
+                <div id="before-content-without-container" class="before-content">
+                    <jdoc:include type="modules" name="before-content-without-container" style="none" />
+                </div>
+            <?php } ?>
+            
+            <?php if ($this->countModules('before-content-with-container')) { ?>
+                <div id="before-content-with-container" class="before-content-with-container">
+                    <div class="container">
+                        <jdoc:include type="modules" name="before-content-with-container" style="none" />
+                    </div>
+                </div>
+            <?php } ?>    
+            
+            <div id="content">
+                <div class="container clearfix">
+                    <jdoc:include type="message" />
+                    <?php if ($this->countModules('content')) { ?>
+                        <jdoc:include type="modules" name="content" style="none" />
+                    <?php } else { ?>
+                        <jdoc:include type="component" />
+                        <jdoc:include type="modules" name="after-component" style="none" />
+                    <?php } ?>
+                </div>
+            </div>	
+            
+            <?php if ($this->countModules('after-content-with-container')) { ?>
+                <div id="after-content-with-container" class="after-content-with-container">
+                    <div class="container">
+                        <jdoc:include type="modules" name="after-content-with-container" style="none" />
+                    </div>
+                </div>
+            <?php } ?>
+            
+            <?php if ($this->countModules('after-content-without-container')) { ?>
+                <div id="after-content-without-container" class="after-content-without-container">
+                    <div class="container">
+                        <jdoc:include type="modules" name="social" style="none" />
+                    </div>
+                    <jdoc:include type="modules" name="after-content-without-container" style="none" />
+                </div>
+            <?php } ?>
+        
         </div>
-    <?php } ?>
+	</div>
     
-    <?php if ($this->countModules('after-content-without-container')) { ?>
-        <div id="after-content-without-container" class="after-content-without-container">
-            <div class="container">
-                <jdoc:include type="modules" name="social" style="none" />
-            </div>
-            <jdoc:include type="modules" name="after-content-without-container" style="none" />
-        </div>
-    <?php } ?>
-	
     <div id="footer" class="footer">
         <div class="container clearfix">
             <div class="footer-left">
