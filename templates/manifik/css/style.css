@@ -121,6 +121,9 @@ p {
 .close:hover {
   color: #ff1b5a;
 }
+#content .wrapper {
+  overflow: hidden;
+}
 /*------------------------------------*\
     #BACKGROUND (бекграунд)
 \*------------------------------------*/
@@ -152,7 +155,6 @@ p {
 }
 .wrapper {
   position: relative;
-  overflow: hidden;
 }
 body.mainpage .background-tools,
 body.contacts .background-tools {
