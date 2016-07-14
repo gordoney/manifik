@@ -76,10 +76,12 @@ $pageClass = $activeMenu->params['pageclass_sfx'];
 
     <div class="wrapper">
     
-        <div class="background-tools-1 background-tools"></div>  
-        <div class="background-tools-2 background-tools"></div> 
-        <div class="background-tools-3 background-tools"></div> 
-        <div class="background-tools-4 background-tools"></div>    
+        <div class="background-tools-block">
+            <div class="background-tools-1 background-tools"></div>  
+            <div class="background-tools-2 background-tools"></div> 
+            <div class="background-tools-3 background-tools"></div> 
+            <div class="background-tools-4 background-tools"></div> 
+        </div>        
     
         <div class="inner-wrapper">
             <?php if ($this->countModules('before-content-without-container')) { ?>
@@ -140,7 +142,7 @@ $pageClass = $activeMenu->params['pageclass_sfx'];
             </div>
             <div class="footer-center">
                 <div class="footer-center-top">
-                    <jdoc:include type="modules" name="footer-center-top" style="none" />
+                    <div><jdoc:include type="modules" name="footer-center-top" style="none" /></div>
                 </div>
                 <div class="footer-center-bottom">
                     <jdoc:include type="modules" name="footer-center-bottom" style="none" />

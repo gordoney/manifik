@@ -121,8 +121,14 @@ p {
 .close:hover {
   color: #ff1b5a;
 }
-#content .wrapper {
+.background-tools-block {
   overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
 /*------------------------------------*\
     #BACKGROUND (бекграунд)
@@ -301,6 +307,8 @@ body.contacts .background-tools {
 }
 .mod-slider-gr.default .item {
   position: relative;
+  height: 500px;
+  overflow: hidden;
 }
 .mod-slider-gr.default .text {
   margin: 0 25%;
@@ -505,6 +513,9 @@ body.contacts .background-tools {
   float: left;
   width: 40%;
 }
+.mod-slider-gr.about .text p {
+  padding-bottom: 10px;
+}
 .mod-slider-gr.about .img {
   float: left;
   width: 58%;
@@ -630,7 +641,7 @@ body.contacts .background-tools {
   -o-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  padding: 70px 30px;
+  padding: 70px 10px;
 }
 .mod_sale .introtext,
 .blog-sale .introtext {
@@ -650,7 +661,7 @@ body.contacts .background-tools {
   padding-bottom: 15px;
 }
 .blog-sale .span4 {
-  width: 30%;
+  width: 32%;
   display: inline-block;
   vertical-align: top;
   line-height: 1;
@@ -839,15 +850,16 @@ body.mainpage .footer .container {
   font-weight: 700;
   padding-bottom: 10px;
 }
-.footer-center-top p {
-  display: inline-block;
-}
-.footer-center-top .custom:before {
+.footer-center-top:before {
   content: "\e904";
   font-family: 'icomoon';
   margin-right: 8px;
   display: inline-block;
   vertical-align: middle;
+}
+.footer-center-top > div {
+  display: inline-block;
+  vertical-align: top;
 }
 .footer-center-bottom {
   font-size: 14px;
@@ -910,7 +922,7 @@ body.mainpage .footer .container {
     #ARTICLE (материал)
 \*------------------------------------*/
 .inner-container {
-  margin: 0 140px 0 140px;
+  margin: 0 125px 0 125px;
   background-color: white;
   padding: 0 30px 40px 30px;
   line-height: 1.7;
@@ -988,12 +1000,16 @@ body.mainpage .footer .container {
   -o-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
-}
-.mod-service-gr .name.js-name:after {
   -moz-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+.mod-service-gr .name.js-name:after {
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 .mod-service-gr .desc {
   font-size: 14px;
@@ -1006,6 +1022,7 @@ body.mainpage .footer .container {
 }
 .mod-service-gr table {
   border: 1px solid #ffb4c9;
+  width: 100%;
 }
 .mod-service-gr tr + tr {
   border-top: 1px solid #ffb4c9;
@@ -1019,6 +1036,9 @@ body.mainpage .footer .container {
 }
 .mod-service-gr .info {
   display: none;
+}
+.mod-service-gr p {
+  padding-bottom: 10px;
 }
 .js-service-open {
   background-color: #fff6f9;

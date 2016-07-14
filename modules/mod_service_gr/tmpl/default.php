@@ -15,21 +15,23 @@ defined('_JEXEC') or die;
         <div class="desc">
             <?php echo $params->get('description'); ?>
         </div>
-        <div class="service">
-            <table>
-                <tr>
-                    <td><?php echo JText :: _('MOD_SERVICE_GR_SERVICE_NAME'); ?></td>
-                    <td><?php echo JText :: _('MOD_SERVICE_GR_SERVICE_WORK'); ?></td>
-                    <td><?php echo JText :: _('MOD_SERVICE_GR_SERVICE_COST'); ?></td>
-                </tr>
-                <?php foreach ($services as $service) { ?>
+        <?php if ($services[0]['service-name']||$services[0]['service-work']||$services[0]['service-cost']) { ?>
+            <div class="service">
+                <table>
                     <tr>
-                        <td><?php echo $service['service-name']; ?></td>
-                        <td><?php echo $service['service-work']; ?></td>
-                        <td><?php echo $service['service-cost']; ?></td>
+                        <td><?php echo JText :: _('MOD_SERVICE_GR_SERVICE_NAME'); ?></td>
+                        <td><?php echo JText :: _('MOD_SERVICE_GR_SERVICE_WORK'); ?></td>
+                        <td><?php echo JText :: _('MOD_SERVICE_GR_SERVICE_COST'); ?></td>
                     </tr>
-                <?php } ?>
-            </table>
-        </div>
+                    <?php foreach ($services as $service) { ?>
+                        <tr>
+                            <td><?php echo $service['service-name']; ?></td>
+                            <td><?php echo $service['service-work']; ?></td>
+                            <td><?php echo $service['service-cost']; ?></td>
+                        </tr>
+                    <?php } ?>
+                </table>
+            </div>
+        <?php } ?>
     </div>
 </div>
