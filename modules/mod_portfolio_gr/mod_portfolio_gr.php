@@ -11,6 +11,9 @@ defined('_JEXEC') or die;
 
 require_once dirname(__FILE__).'/helper.php';
 
+$document = JFactory::getDocument();
+$document->addScript(JURI::base().'modules/'.$module->module.'/script.js');
+
 $data = modPortfolioGrHelper::getData($params);
 
 require JModuleHelper::getLayoutPath('mod_portfolio_gr', $params->get('layout', 'default'));

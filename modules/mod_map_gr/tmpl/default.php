@@ -20,6 +20,7 @@ defined('_JEXEC') or die;
         <div class="modal fade modal_map" id="modal_map<?php echo $module->id; ?>" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">	
+                <div type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</div>
     <?php } ?>
     
                 <div class="map"> 
@@ -32,7 +33,7 @@ defined('_JEXEC') or die;
                                     <?php if ($phones) { ?>
                                         <?php foreach ($phones as $phone) { ?>
                                             <div class="phone">
-                                                <div><?php echo $phone['phone-name']; ?></div>
+                                                <div class="type"><?php echo $phone['phone-name']; ?></div>
                                                 <div><?php echo $phone['phone-code']; ?> <span><?php echo $phone['phone-number']; ?></span></div>
                                             </div>
                                         <?php } ?>

@@ -18,7 +18,6 @@ jQuery(document).ready(function () {
                     slidesToShow: 1,
                     fade: true,
                     draggable: false,
-                    focusOnSelect: true,
                 }); 
                 
                 jQuery(this).find('.js-arrow-right').click(function () {
@@ -38,7 +37,6 @@ jQuery(document).ready(function () {
                     slidesToShow: 1,
                     fade: true,
                     draggable: false,
-                    focusOnSelect: true,
                     prevArrow: '<div class="arrows arrow-left"><i class="icon-right-arrow"></i></div>',
                     nextArrow: '<div class="arrows arrow-right js-arrow-right"><i class="icon-right-arrow"></i></div>',
                 });  

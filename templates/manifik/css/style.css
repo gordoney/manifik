@@ -103,6 +103,24 @@ a:focus {
 p {
   word-wrap: normal;
 }
+.border_red {
+  border: 1px solid #ff1b5a;
+}
+.close {
+  position: absolute;
+  display: inline-block;
+  font-size: 50px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-family: 'SnellRoundhand-Bold';
+  color: #000000;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ff1b5a;
+}
 /*------------------------------------*\
     #BACKGROUND (бекграунд)
 \*------------------------------------*/
@@ -113,27 +131,28 @@ p {
   z-index: -1;
 }
 .background-tools-1 {
-  background: url(../images/back1.png) -250px 120px no-repeat;
+  background: url(../images/back1.png) 0 120px no-repeat;
   left: 0;
   width: 620px;
 }
 .background-tools-2 {
-  background: url(../images/back2.png) 10px 450px no-repeat;
+  background: url(../images/back2.png) 0 450px no-repeat;
   left: 0;
   width: 450px;
 }
 .background-tools-3 {
-  background: url(../images/back3.png) 200px 20px no-repeat;
+  background: url(../images/back3.png) 0 20px no-repeat;
   right: 0;
   width: 620px;
 }
 .background-tools-4 {
-  background: url(../images/back4.png) 180px 600px no-repeat;
+  background: url(../images/back4.png) 0 600px no-repeat;
   right: 0;
   width: 380px;
 }
 .wrapper {
   position: relative;
+  overflow: hidden;
 }
 body.mainpage .background-tools,
 body.contacts .background-tools {
@@ -149,10 +168,14 @@ body.contacts .background-tools {
   font-size: 35px;
   font-family: 'SnellRoundhand-Bold';
   padding-bottom: 10px;
+  padding-right: 10px;
 }
 .header .logo a,
 .header .logo a:hover {
   color: #000000;
+}
+.header .logo img {
+  max-width: 100px;
 }
 .header-left {
   font-size: 14px;
@@ -160,6 +183,10 @@ body.contacts .background-tools {
   font-weight: 300;
   float: left;
   width: 25%;
+}
+.header-left .logo,
+.header-left .custom {
+  display: inline-block;
 }
 .header-center {
   float: left;
@@ -665,8 +692,6 @@ body.contacts .background-tools {
   line-height: 1.3;
 }
 .mod_portfolio_gr .img {
-  float: left;
-  width: 33.3%;
   height: 50%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -684,6 +709,14 @@ body.contacts .background-tools {
 \*------------------------------------*/
 .mod-map-gr .map_window {
   height: 500px;
+}
+.mod-map-gr .close {
+  top: -45px;
+  right: -30px;
+  color: #ff1b5a;
+}
+.mod-map-gr .close:hover {
+  color: #000000;
 }
 .mod-map-gr.modal-off .map_window {
   height: 500px;
@@ -746,6 +779,9 @@ body.contacts .background-tools {
 .mod-map-gr.modal-off .phone:nth-child(odd) {
   padding-right: 30px;
 }
+.mod-map-gr.modal-off .type {
+  font-size: 14px !important;
+}
 /*------------------------------------*\
     #FOOTER (футер)
 \*------------------------------------*/
@@ -769,6 +805,9 @@ body.mainpage .footer .container {
 .footer-left .logo a,
 .footer-left .logo a:hover {
   color: #000000;
+}
+.footer-left .logo img {
+  max-width: 100px;
 }
 .footer-center {
   display: inline-block;
@@ -1024,21 +1063,12 @@ body.mainpage .footer .container {
   color: #ff1b5a;
 }
 .mod_form_gr .close {
-  position: absolute;
   top: 0px;
   right: 20px;
-  display: inline-block;
-  font-size: 50px;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  font-family: 'SnellRoundhand-Bold';
-  color: #000000;
-  cursor: pointer;
 }
-.mod_form_gr .close:hover {
-  color: #ff1b5a;
+.mod_form_gr .answer .modal-body {
+  text-align: left;
+  padding: 40px;
 }
 /*------------------------------------*\
     #GALLERY (Галерея)

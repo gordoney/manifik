@@ -20,12 +20,12 @@ defined('_JEXEC') or die;
 		<div class="modal fade" id="modal_form<?php echo $module->id; ?>" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content modal-content-form">
+                    <div type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</div>
 	<?php } ?>
 
 	<form id="form_back_<?php echo $module->id; ?>" name="form" method="post" enctype="multipart/form-data" class="clearfix">
 		<div class="page-head">
 			<span><?php echo $params->get('head'); ?></span>
-            <div type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</div>
 		</div>
 				<?php for ($i=0; $i < count($fields); $i++) { ?>
 					<?php if ($fields[$i]['type'] != 'separator') { ?>
@@ -37,11 +37,11 @@ defined('_JEXEC') or die;
 							<div class="field">
 								<?php switch ($fields[$i]['type']) {
 									case 'text': ?>
-										<input class="input" type="text" name="field<?php echo $i; ?>" placeholder="<?php echo $fields[$i]['placeholder']; ?><?php if ($fields[$i]['required']) { echo '*'; } ?>">
+										<input class="input" type="text" name="field<?php echo $i; ?>" placeholder="<?php echo $fields[$i]['placeholder']; ?><?php if ($fields[$i]['required']&&$fields[$i]['placeholder']) { echo '*'; } ?>">
 										<?php break;
 
 									case 'textarea': ?>
-										<textarea class="input" name="field<?php echo $i; ?>" placeholder="<?php echo $fields[$i]['placeholder']; ?><?php if ($fields[$i]['required']) { echo '*'; } ?>"></textarea>
+										<textarea class="input" name="field<?php echo $i; ?>" placeholder="<?php echo $fields[$i]['placeholder']; ?><?php if ($fields[$i]['required']&&$fields[$i]['placeholder']) { echo '*'; } ?>"></textarea>
 										<?php break;							
 								} ?>
 							</div>
@@ -80,7 +80,7 @@ defined('_JEXEC') or die;
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-body">
-					<button type="button" class="close modal_close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<div type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</div>
 					<div><?php echo $params->get('thanks'); ?></div>
 				</div>
 			</div>

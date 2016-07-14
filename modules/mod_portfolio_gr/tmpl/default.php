@@ -25,10 +25,18 @@ $qtyImgs = 6;
         <div class="background-overlay"></div>
     </div>
     <div class="right-block clearfix">
-        <?php foreach ($data as $key => $item) { ?>
-            <div class="img<?php if ($key >= $qtyImgs) { echo ' hidden-img'; } ?>" style="background-image: url(<?php echo $item['img-prev']; ?>">
-                <a class="background-overlay js-gallery-portfolio" href="<?php echo $item['img-full']; ?>"></a>
-            </div>
-        <? } ?>
+        <div class="slick-slider js-slick-slider">
+            <?php foreach ($data as $key => $item) { ?>
+                <?php if ($key == 0 || $key%2 == 0) { ?>
+                    <div class="item">
+                <?php } ?>
+                    <div class="img" style="background-image: url(<?php echo $item['img-prev']; ?>">
+                        <a class="background-overlay js-gallery-portfolio" href="<?php echo $item['img-full']; ?>"></a>
+                    </div>
+                <?php if ($key+1 == count($data) || $key%2 == 1) { ?>
+                    </div>
+                <?php } ?>
+            <? } ?>
+        </div>
     </div>
 </div>
